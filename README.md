@@ -48,16 +48,18 @@ A beautiful, responsive e-commerce website built with React, Vite, and Tailwind 
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── Navbar.jsx      # Navigation bar
-│   └── Footer.jsx      # Footer component
+│   ├── Navbar.tsx      # Navigation bar
+│   └── Footer.tsx      # Footer component
 ├── pages/              # Page components
-│   ├── Home.jsx        # Homepage
-│   ├── Products.jsx    # Product listing
-│   ├── ProductDetail.jsx # Individual product page
-│   └── Cart.jsx        # Shopping cart
-├── App.jsx             # Main application component
+│   ├── Home.tsx        # Homepage
+│   ├── Products.tsx    # Product listing
+│   ├── ProductDetail.tsx # Individual product page
+│   └── Cart.tsx        # Shopping cart
+├── App.tsx             # Main application component
 ├── index.css           # Global styles with Tailwind
-└── main.jsx           # Application entry point
+├── data/
+│   └── products.ts     # Product data and helpers
+└── main.tsx           # Application entry point
 ```
 
 ## 🎨 Pages & Features

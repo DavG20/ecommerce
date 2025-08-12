@@ -116,10 +116,10 @@ const Cart = () => {
               <div className="text-center">
                 <p className="text-sm text-gray-600 mb-2">We accept</p>
                 <div className="flex justify-center gap-2">
-                  <div className="w-8 h-5 bg-gray-200 rounded text-xs flex items-center justify-center">VISA</div>
-                  <div className="w-8 h-5 bg-gray-200 rounded text-xs flex items-center justify-center">MC</div>
-                  <div className="w-8 h-5 bg-gray-200 rounded text-xs flex items-center justify-center">AMEX</div>
-                  <div className="w-8 h-5 bg-gray-200 rounded text-xs flex items-center justify-center">PP</div>
+                  <img src="/src/assets/visa.svg" alt="Visa" className="h-6 w-10" />
+                  <img src="/src/assets/mastercard.svg" alt="Mastercard" className="h-6 w-10" />
+                  <img src="/src/assets/amex.svg" alt="American Express" className="h-6 w-10" />
+                  <img src="/src/assets/paypal.svg" alt="PayPal" className="h-6 w-10" />
                 </div>
               </div>
               <div className="mt-6 text-center">
