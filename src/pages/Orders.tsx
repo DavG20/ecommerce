@@ -1,64 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/useAuth';
-
-type OrderItem = {
-  id: number;
-  name: string;
-  quantity: number;
-  price: number;
-  image: string;
-};
-
-type Order = {
-  id: string;
-  date: string; // ISO
-  status: 'Processing' | 'Shipped' | 'Delivered' | 'Cancelled';
-  items: OrderItem[];
-  total: number;
-};
-
-const mockOrders: Order[] = [
-  {
-    id: 'ORD-20250112-001',
-    date: '2025-01-12',
-    status: 'Delivered',
-    items: [
-      {
-        id: 1,
-        name: 'Wireless Bluetooth Headphones',
-        quantity: 1,
-        price: 89.99,
-        image:
-          'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop',
-      },
-    ],
-    total: 89.99,
-  },
-  {
-    id: 'ORD-20250120-014',
-    date: '2025-01-20',
-    status: 'Shipped',
-    items: [
-      {
-        id: 2,
-        name: 'Smart Fitness Watch',
-        quantity: 1,
-        price: 199.99,
-        image:
-          'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop',
-      },
-      {
-        id: 3,
-        name: 'Portable Bluetooth Speaker',
-        quantity: 1,
-        price: 59.99,
-        image:
-          'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=200&h=200&fit=crop',
-      },
-    ],
-    total: 259.98,
-  },
-];
+import { mockOrders } from '../data/orders';
 
 export default function Orders() {
   const { isAuthenticated } = useAuth();
@@ -131,8 +73,12 @@ export default function Orders() {
                 </div>
 
                 <div className="mt-5 flex justify-end gap-2">
-                  <button className="btn-secondary">View details</button>
-                  {order.status !== 'Delivered' && <button className="btn-primary">Track package</button>}
+                  <Link to={`/order/${order.id}`} className="btn-secondary">View details</Link>
+                  {order.trackingNumber && (
+                    <Link to={`/track-package/${order.trackingNumber}`} className="btn-primary">
+                      {order.status !== 'Delivered' ? 'Track package' : 'Delivery info'}
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

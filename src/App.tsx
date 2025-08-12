@@ -8,6 +8,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Orders from './pages/Orders';
+import OrderDetails from './pages/OrderDetails';
+import TrackPackage from './pages/TrackPackage';
 import Footer from './components/Footer';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
@@ -28,6 +30,8 @@ function AppShell() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/order/:orderId" element={<OrderDetails />} />
+          <Route path="/track-package/:trackingNumber" element={<TrackPackage />} />
         </Routes>
       </main>
       <Footer />
