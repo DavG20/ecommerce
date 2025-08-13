@@ -10,6 +10,8 @@ import Profile from './pages/Profile';
 import Orders from './pages/Orders';
 import OrderDetails from './pages/OrderDetails';
 import TrackPackage from './pages/TrackPackage';
+import Checkout from './pages/Checkout';
+import Deals from './pages/Deals';
 import Footer from './components/Footer';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
@@ -26,6 +28,8 @@ function AppShell() {
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/deals" element={<Deals />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />

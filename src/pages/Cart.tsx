@@ -112,7 +112,7 @@ const Cart = () => {
                   <button className="btn-secondary whitespace-nowrap">Apply</button>
                 </div>
               </div>
-              <button className="w-full btn-primary text-lg py-3 mb-4">Proceed to Checkout</button>
+              <Link to="/checkout" className="w-full btn-primary text-lg py-3 mb-4 block text-center">Proceed to Checkout</Link>
               <div className="text-center">
                 <p className="text-sm text-gray-600 mb-2">We accept</p>
                 <div className="flex justify-center gap-2">
